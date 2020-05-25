@@ -44,7 +44,7 @@
     </section>
   </main>
   <footer>
-    <section>
+    <div>
       <ul>
         <li><a href="#">В контакте</a></li>
         <li><a href="#">Фейсбук</a></li>
@@ -54,26 +54,32 @@
         <p>Давайте дружить, это выгодно!</p>
         <p>Cкидка 10% для друзей из социальных сетей.</p>
       </div>
-    </section>
-    <section>
-      <h2>Напишите нам</h2>
-      <form class="form-action" action="https://echo.htmlacademy.ru/courses" method="post">
+    </div>
+  </footer>
+  <div>
+    <h2>Напишите нам</h2>
+    <form class="connect" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div>
         <label>Ваше имя:
           <input type="text" name="yourname" value="Имя Фамилия">
         </label>
-
+      </div>
+      <div>
         <label> Ваш e-mail:
           <input type="text" name="email" value="email@example.com">
         </label>
-        <br>
+      </div>
+      <div>
         <label for="text-field">Текст письма:</label>
-        <br>
+      </div>
+      <div>
         <textarea name="text" id="text-field" rows="5" cols="50">В свободной форме</textarea>
-        <br>
-        <input type="submit" value="Отправить">
-      </form>
-    </section>
-  </footer>
+      </div>
+      <div>
+        <button class="button" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
