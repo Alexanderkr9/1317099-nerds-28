@@ -13,16 +13,17 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Cтудия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#" aria-label="студия">Cтудия</a></li>
+        <li><a href="#" aria-label="клиенты">Клиенты</a></li>
+        <li><a href="catalog.html" aria-label="магазин">Магазин</a></li>
+        <li><a href="#" aria-label="контакты">Контакты</a></li>
       </ul>
     </nav>
-    <div><a class="basket" href="#">Корзина</a></div>
+    <div><a class="basket" href="#" aria-label="корзина">Корзина</a></div>
   </header>
   <main>
     <section>
+      <h4 class="visually-hidden">рекламма услуг студии</h4>
       <div>
         <img src="img/illustration-1.svg" width="300" height="150" alt="Компьютер">
         <p>Веб сайты</p>
@@ -46,17 +47,19 @@
   <footer>
     <div>
       <ul>
-        <li><a href="#">В контакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
+        <li><a href="#"><span class="visually-hidden">В контакте</span></a></li>
+        <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
-      <div>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Cкидка 10% для друзей из социальных сетей.</p>
-      </div>
+    </div>
+    <div>
+      <p>Давайте дружить, это выгодно!</p>
+      <p>Cкидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+
   <div>
+    <h4 class="visually-hidden">форма обратной связи</h4>
     <h2>Напишите нам</h2>
     <form class="connect" action="https://echo.htmlacademy.ru/courses" method="post">
       <div>
@@ -71,8 +74,6 @@
       </div>
       <div>
         <label for="text-field">Текст письма:</label>
-      </div>
-      <div>
         <textarea name="text" id="text-field" rows="5" cols="50">В свободной форме</textarea>
       </div>
       <div>
