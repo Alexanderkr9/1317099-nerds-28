@@ -51,7 +51,7 @@ img {
 
 .logo a:hover,
 .logo a:focus {
-  opacity: 0, 3;
+  opacity: 0.3;
   background-color: 000000;
 }
 
@@ -76,7 +76,7 @@ img {
 
 .main-navigation a:focus {
   color: var(--basic-black);
-  opacity: 0, 3;
+  opacity: 0.3;
 }
 
 .main-navigation a:active {
@@ -99,7 +99,7 @@ img {
 
 .basket:focus {
   color: var(--basic-black);
-  opacity: 0, 3;
+  opacity: 0.3;
 
 }
 
@@ -192,8 +192,16 @@ img {
   color: var(--strawberry-red-light);
 }
 
-.visually-hidden {
-  display: none;
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .social ul {
@@ -252,7 +260,7 @@ img {
 }
 
 .menu label:disabled {
-  opacity: 0, 3;
+  opacity: 0.3;
 
 }
 
@@ -288,7 +296,7 @@ img {
 
 .catalog-cards h3:focus {
   color: var(--basic-black);
-  opacity: 0, 3;
+  opacity: 0.3;
 }
 
 .catalog-cards p {
