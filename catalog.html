@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html  lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,25 +10,25 @@
 </head>
 
 <body>
-  <header>
-    <a class="logo" href="index.html">
-      <img src="img/nerds-logo.svg" width="" height="" alt="Нёрдс">
-    </a>
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html" aria-label="студия">Cтудия</a></li>
-        <li><a href="#" аria-label="клиенты">Клиенты</a></li>
-        <li><a href="#" aria-label="магазин">Магазин</a></li>
-        <li><a href="#" aria-label="контакты">Контакты</a></li>
-      </ul>
-    </nav>
-    <div><a class="basket" href="#" aria-label="корзина">Корзина</a></div>
-  </header>
-  <div>
+  <div class="header-wrapper">
+    <header class="header">
+      <a class="logo" href="index.html">
+        <img src="img/nerds-logo.svg" width="160px" height="65px" alt="Нёрдс">
+      </a>
+      <nav class="main-navigation-wrapper">
+        <ul class="main-navigation">
+          <li class="main-navigation__item"><a href="index.html" aria-label="студия">Cтудия</a></li>
+          <li class="main-navigation__item"><a href="#" aria-label="клиенты">Клиенты</a></li>
+          <li class="main-navigation__item"><a href="#" aria-label="магазин">Магазин</a></li>
+          <li class="main-navigation__item"><a href="#" aria-label="контакты">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="basket" href="#" aria-label="корзина">Корзина</a>
+    </header>
     <div class="visually-hidden">Магазин готовых шаблонов (заголовок)</div>
     <h1 class="main-title">Магазин готовых шаблонов</h1>
   </div>
-  <main>
+  <main class="main">
     <aside>
       <h4 class="visually-hidden">форма поиска товаров</h4>
       <form class="form" method="get" action="https://echo.htmlacademy.ru">
@@ -80,14 +80,14 @@
       </form>
     </aside>
     <h1 class="visually-hidden">ФОТОГАЛЕРЕЯ</h1>
-    <div сlass="catalog-cards">
+     <div сlass="catalog-cards">
       <a href="#"><img src="img/img-sedona.jpg" width="360" height="625" alt="Добро пожаловать в Седону">
-        <div>
+         <div>
           <h3>SEDONA</h3>
           <p>Информационный сайт для туристов</p>
           <span>9900 РУБ.</span>
-        </div>
-      </a>
+         </div>
+        </a>
       <a href="#"><img src="img/img-pink.jpg" width="360" height="625" alt="Розовый">
         <div>
           <h3>PINK APP</h3>
@@ -125,7 +125,7 @@
       </a>
     </div>
   </main>
-  <footer>
+  <footer class="main-footer">
     <div class="social">
       <ul>
         <li>
@@ -157,7 +157,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="connect-friend">
       <p class="lets-friend">Давайте дружить, это выгодно!</p>
       <p class="discount">Cкидка 10% для друзей из социальных сетей.</p>
     </div>
