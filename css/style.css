@@ -168,8 +168,15 @@ img {
   box-shadow: inset 0px 3px 0px;
 }
 
-.social .social-button {
-  color: var(--light-gray-special);
+
+
+.social-button svg {
+  fill:  var(--light-gray-special);
+}
+
+
+.social-button svg:hover {
+  fill:  red;
 }
 
 .social .social-button:hover {
@@ -402,16 +409,14 @@ img {
   width: 1160px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 
-.catalog-cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-width: 100%;
 }
 
 
