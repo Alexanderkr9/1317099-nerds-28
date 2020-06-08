@@ -32,6 +32,33 @@
     <aside>
       <h4 class="visually-hidden">форма поиска товаров</h4>
       <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter-item">
+          <legend>Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                  width: 30%;
+                  margin-left: 20%
+                "></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                left: 20%
+              "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                left: 50%
+              "></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
+      </fieldset>
         <fieldset class="menu">
           <legend class="menunav">Cетка:</legend>
           <ul>
@@ -126,8 +153,8 @@
     </div>
   </main>
   <footer class="main-footer">
-    <div class="social">
-      <ul>
+    <div>
+       <ul class="social">
         <li>
           <a class="social-button" href="#">
             <span class="visually-hidden">Вконтакте</span>
