@@ -502,12 +502,15 @@ img {
   font-size: inherit;
 }
 
-.connect: {
+.connect {
   position: fixed;
+  top: 50%;
+  left: 50%
 }
 
 .appointment-form {
   display: flex;
+  position: relative;
 }
 
 
