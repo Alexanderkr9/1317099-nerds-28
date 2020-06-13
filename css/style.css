@@ -64,6 +64,10 @@ img {
 }
 
 .basket {
+  position: relative;
+  padding-left: 26px;
+  padding-top: 27px;
+  margin-left: 21px;
   max-width: 110px;
   height: 15px;
   font-style: normal;
@@ -73,6 +77,19 @@ img {
   text-transform: uppercase;
   color: var(--basic-black);
   padding-bottom:  15px;
+}
+
+.basket::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  margin-top: 22px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+
 }
 
 .basket:hover {
@@ -162,15 +179,18 @@ img {
   padding: 0;
 }
 
-.social-button svg {
+.social-button svg path {
   fill: linear-gradient(0deg, var(--light-gray-special)), var(--basic-white);
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
 }
 
-.social-button svg:hover {
+.social-button svg:hover path{
   fill:  linear-gradient(0deg, var(--basic-red-pink)), var(--basic-white);
 }
 
-.social-button svg:focus {
+.social-button svg:focus path{
   fill:  linear-gradient(0deg, var(--strawberry-red-light) ), var(--basic-white);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -202,10 +222,6 @@ img {
   font-size: 16px;
   line-height: 22px;
   color: var(--dark-blue-black);
-}
-
-.connect {
-  display: none;
 }
 
 .main-title {
@@ -437,7 +453,7 @@ img {
 .range-controls .bar {
   width: 70%;
   height: 2px;
-  background: var(--basic-green-light);
+  background-color: var(--basic-grenn-light);
 }
 
 .range-controls .toggle {
@@ -485,6 +501,15 @@ img {
   font-family: inherit;
   font-size: inherit;
 }
+
+.connect: {
+  position: fixed;
+}
+
+.appointment-form {
+  display: flex;
+}
+
 
 
 
