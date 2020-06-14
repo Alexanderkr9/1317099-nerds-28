@@ -504,7 +504,8 @@ img {
 
 .connect {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 50%;
   left: 50%
@@ -529,5 +530,15 @@ img {
 
 .connect .button:hover {
  background-color: var(--basic-red-pink);
+}
+
+
+
+.connect a{
+ color: var(--basic-black);
+ font-style: normal;
+ font-weight: bold;
+ font-size: 36px;
+ line-height: 36px;
 }
 
