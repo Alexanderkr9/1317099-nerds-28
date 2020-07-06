@@ -62,16 +62,16 @@
         <fieldset class="menu">
           <legend class="menunav">Cетка:</legend>
           <ul>
-            <li>
-              <input type="radio" name="setka-group" value="adaptive" id="setkaadapt" checked>
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-radio filter-input" type="radio" name="setka-group"  value="adaptive" id="setkaadapt" checked>
               <label for="setkaadapt">Адаптивная</label>
             </li>
-            <li>
-              <input type="radio" name="setka-group" value="fixed" id="setkafix">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" name="setka-group" value="fixed" id="setkafix">
               <label for="setkafix">Фиксированная</label>
             </li>
-            <li>
-              <input type="radio" name="setka-group" value="rubber" id="setkagroup">
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-radio filter-input" type="radio" name="setka-group" value="rubber" id="setkagroup">
               <label for="setkagroup">Резиновая</label>
             </li>
           </ul>
@@ -79,24 +79,24 @@
         <fieldset class="menu">
           <legend class="menunav">Особенности:</legend>
           <ul>
-            <li>
-              <input type="checkbox" name="slaider" id="slider" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slaider" id="slider" checked>
               <label for="slider">Слайдер</label>
             </li>
-            <li>
-              <input type="checkbox" name="advantages" id="advantages">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantages">
               <label for="advantages">Блок преимуществ</label>
             </li>
-            <li>
-              <input type="checkbox" name="news" id="news" checked>
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-checkbox filter-input"type="checkbox" name="news" id="news" checked>
               <label for="news">Новости</label>
             </li>
-            <li>
-              <input type="checkbox" name="gallery" id="gallery">
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery" id="gallery">
               <label for="gallery">Галлерея</label>
             </li>
-            <li>
-              <input type="checkbox" name="basket" id="basket">
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-checkbox filter-input"type="checkbox" name="basket" id="basket">
               <label for="basket">Корзина</label>
             </li>
           </ul>
@@ -122,13 +122,13 @@
             <a href="#">По названию</a>
           </li>
         </ul>
-        <div class="sorting-buttons">
-          <button class="button-down" type="button">
+        <div class="sorting-arrows">
+          <a class="arrow-down" >
             <span class="visually-hidden">От большего к меньшему</span>
-          </button>
-          <button class="button-up">
+          </a>
+          <a class="arrow-up">
             <span class="visually-hidden">Oт меньшего к большему</span>
-          </button>
+          </a>
         </div>
         </div>
       <div class="cards">
@@ -249,29 +249,30 @@
       <a class="text-us" href="">Напишите нам</a>
     </div>
   </section>
-  <footer class="main-footer">
-    <div>
+  <footer class="footer">
+    <div class="container-footer">
+    <div class="wrapper-social">
       <ul class="social">
         <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">В контакте</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 15" x="0px" y="0px" width="26px" height="15px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 26 15" version="1.1">
+          <a class="social-button" href="">
+            <span class="visually-hidden">Vk</span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 26 15" x="0px" y="0px" width="26px" height="15px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 26 15" version="1.1">
               <path fill="#ffffff" d="M 16.138 11.51 c 0.956 -0.309 2.18 2.04 3.483 2.939 c 0.978 0.681 1.727 0.534 1.727 0.534 l 3.473 -0.05 c 0 0 1.815 -0.112 0.957 -1.554 c -0.071 -0.12 -0.503 -1.069 -2.585 -3.022 c -2.177 -2.043 -1.882 -1.712 0.739 -5.244 c 1.597 -2.153 2.236 -3.468 2.036 -4.028 c -0.192 -0.539 -1.365 -0.399 -1.365 -0.399 L 20.69 0.713 c -0.381 0.001 -0.704 0.119 -0.851 0.515 c -0.003 0.004 -0.621 1.666 -1.445 3.079 c -1.741 2.989 -2.436 3.148 -2.724 2.961 c -0.661 -0.433 -0.494 -1.737 -0.494 -2.664 c 0 -2.897 0.432 -4.105 -0.846 -4.417 c -0.427 -0.104 -0.739 -0.172 -1.828 -0.182 c -1.392 -0.021 -2.574 0 -3.244 0.329 c -0.445 0.223 -0.786 0.712 -0.579 0.74 c 0.26 0.035 0.843 0.16 1.155 0.586 c 0.401 0.552 0.389 1.789 0.389 1.789 s 0.229 3.411 -0.54 3.834 c -0.528 0.29 -1.25 -0.302 -2.803 -3.016 C 6.087 2.879 5.488 1.345 5.488 1.345 S 5.372 1.06 5.162 0.904 C 4.912 0.719 4.562 0.66 4.562 0.66 L 0.848 0.684 c 0 0 -0.558 0.016 -0.763 0.262 C -0.097 1.164 0.07 1.614 0.07 1.614 s 2.909 6.881 6.203 10.347 c 3.02 3.182 6.452 2.971 6.452 2.971 h 1.555 c 0 0 0.469 -0.054 0.709 -0.312 c 0.224 -0.24 0.214 -0.691 0.214 -0.691 S 15.172 11.82 16.138 11.51 Z" />
             </svg>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_9" viewBox="0 0 12 22" x="0px" y="0px" width="12px" height="22px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 12 22" version="1.1">
+          <a class="social-button" href="">
+            <span class="visually-hidden">Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_3" viewBox="0 0 12 22" x="0px" y="0px" width="12px" height="22px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 12 22" version="1.1">
               <path fill="#ffffff" d="M 12 4 V 0 H 8 C 5.791 0 4 1.791 4 4 v 4 H 0 v 4 h 4 v 10 h 4 V 12 h 4 V 8 H 8 V 4 H 12 Z" />
             </svg>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Инстаграм</span>
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_10" viewBox="0 0 21 21" x="0px" y="0px" width="21px" height="21px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 21 21" version="1.1">
+          <a class="social-button" href="">
+            <span class="visually-hidden">Instagram</span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_4" viewBox="0 0 21 21" x="0px" y="0px" width="21px" height="21px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" enable-background="new 0 0 21 21" version="1.1">
               <path fill="#ffffff" d="M 18 0 H 3 C 1.35 0 0 1.35 0 3 v 15 c 0 1.65 1.35 3 3 3 h 15 c 1.65 0 3 -1.35 3 -3 V 3 C 21 1.35 19.65 0 18 0 Z M 10.5 7 c 1.93 0 3.5 1.57 3.5 3.5 S 12.43 14 10.5 14 S 7 12.43 7 10.5 S 8.57 7 10.5 7 Z M 18 18 H 3 V 9 h 1.181 C 4.067 9.482 4 9.983 4 10.5 c 0 3.59 2.91 6.5 6.5 6.5 s 6.5 -2.91 6.5 -6.5 c 0 -0.517 -0.066 -1.018 -0.181 -1.5 H 18 V 18 Z M 18 7 h -4 V 3 h 4 V 7 Z" />
             </svg>
           </a>
@@ -281,6 +282,7 @@
     <div class="connect-friend">
       <p class="lets-friend">Давайте дружить, это выгодно!</p>
       <p class="discount">Cкидка 10% для друзей из социальных сетей.</p>
+    </div>
     </div>
   </footer>
   <div class="connect">
@@ -308,10 +310,10 @@
       <div>
         <button class="button" type="submit">Отправить</button>
       </div>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <a href="#" class="modal-close"  aria-label="Закрыть"></a>
     </form>
   </div>
-
+  <script src="modal-show.js"></script>
 </body>
 
 </html>
