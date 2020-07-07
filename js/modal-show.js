@@ -5,7 +5,7 @@ var loginForm = loginPopup.querySelector(".form-acting");
 var yourname = loginPopup.querySelector(".your-name");
 var youremail = loginPopup.querySelector(".your-email");
 
-loginLink.addEventListener("click", function () {
+ouradress.addEventListener("click", function () {
   evt.preventDefault();
   loginPopup.classList.add("modal-show");
 });
@@ -22,12 +22,12 @@ loginForm.addEventListener("submit", function (evt) {
   }
 });
 
-
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (loginPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      loginPopup.classList.remove("modal-show");
+    if (evt.keyCode === 27) {
+      if (loginPopup.classList.contains("modal-show")) {
+        evt.preventDefault();
+        loginPopup.classList.remove("modal-show");
+        loginPopup.classList.remove("modal-error");
+      }
     }
-  }
-});
+  });

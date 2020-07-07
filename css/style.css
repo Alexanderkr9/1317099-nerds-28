@@ -275,6 +275,7 @@ img {
   height: 25px;
   border: 2px solid var(--basic-tarp-gray);
   border-radius: 50%;
+  opacity: 0.4;
 }
 
 .filter-option:disabled {
@@ -292,6 +293,7 @@ img {
   height: 9px;
   background-color: var(--basic-tarp-gray);
   border-radius: 50%;
+  opacity: 0.4;
 }
 
 .filter-option label {
@@ -304,16 +306,18 @@ img {
  margin: 15px;
 }
 
-:checked .filter-input-checkbox + label::after {
+ .filter-input-checkbox:checked + label::after {
   content: "";
   width: 25px;
   height: 22px;
   position: absolute;
-  left: 6px;
-  top: -1px;
-  background-image: url("../img/сheсkbox-on.svg");
+  left: -43px;
+  top: 0px;
+  background-image: url("../img/svg-nerds/checkbox-on.svg");
   background-repeat: no-repeat;
-}
+  background-size: contain;
+  opacity: 0.4;
+ }
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -323,6 +327,7 @@ img {
   width: 23px;
   height: 23px;
   border: 2px solid var(--basic-tarp-gray);
+  opacity: 0.4;
 }
 
 .filter-input-checkbox + label::before {
@@ -333,6 +338,7 @@ img {
   width: 16px;
   height: 16px;
   border: 2px solid var(--basic-tarp-gray);
+  opacity: 0.4;
 }
 
 .menu {
@@ -494,32 +500,44 @@ img {
 }
 
 .sorting-arrows .arrow-up:hover {
-  border-color: transparent transparent var(--white-gray-neutral);
+  border-color: transparent transparent var(-basic-black-brown);
 }
 
 .sorting-arrows .arrow-up:active{
-  background-color: var(--basic-black-brown);
+  background-color: transparent transparent var(--basic-black-brown);
 }
 
-.sorting-arrows .arrow-down:active {
+.sorting-arrows .arrow-down:focus {
   background-color: transparent transparent var(--basic-black-brown);
 
 }
 
+.sorting-arrows .arrow-down {
+  background-color: transparent transparent var(--basic-black-brown);
+}
+
 .sorting-arrows .arrow-down:hover {
-  border-color:   var(--white-gray-neutral);
+  border-color: transparent transparent var(-basic-black-brown);
+  opacity: 0.2;
 }
 
 .sorting-arrows .arrow-up {
   margin: 0;
   border-width: 0 5.5px 10px;
-  border-color: transparent transparent var(--white-gray-neutral);
+  border-color: transparent transparent var(--basic-black-brown);
+  opacity: 0.2;
 }
 
 .sorting-arrows .arrow-up:hover {
   margin: 0;
   border-width: 0 5.5px 10px;
-  border-color:  var(--white-gray-neutral);
+  border-color: transparent transparent var(--white-gray-neutral);
+}
+
+.sorting-arrows .arrow-up:focus {
+  margin: 0;
+  border-width: 0 5.5px 10px;
+  border-color: transparent transparent var(--basic-black-brown);
 }
 
 .header-wrapper {
@@ -542,8 +560,16 @@ img {
 }
 
 .main-navigation__item {
-  padding: 12px 24px;
+    margin-right: 46px;
 }
+
+
+
+.main-navigation .active{
+    border-bottom: 2px solid #fb565a;
+    padding-bottom: 8px;
+}
+
 
 .main-navigation a {
   font-style: normal;
@@ -632,11 +658,11 @@ img {
  bottom: 0px;
 }
 
-:not(:first-child).cards-item .details {
+.cards-item .details {
   display: none;
 }
 
-:not(:first-child).cards-item:hover .details {
+.cards-item:hover .details {
   display: block;
 }
 
@@ -987,11 +1013,18 @@ img {
 }
 
 .map {
-  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%;;
   margin-top: 80px;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+.wrapper-map {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .marker {
