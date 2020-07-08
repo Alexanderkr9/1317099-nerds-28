@@ -55,14 +55,14 @@ img {
   height: auto;
 }
 
-.logo a {
-  background-color: var(--basic-black);
+.logo img {
+  color: var(--basic-black);
 }
 
-.logo a:hover,
-.logo a:focus {
+.logo img:hover,
+.logo img:focus {
   opacity: 0.3;
-  background-color: var(--basic-black);
+  color: var(--basic-black);
 }
 
 .basket {
@@ -91,7 +91,6 @@ img {
   margin-top: 2px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-
 }
 
 .basket:hover {
@@ -182,7 +181,6 @@ img {
   list-style: none;
 }
 
-
 .container-footer {
   margin: 0 auto;
   padding: 0;
@@ -206,7 +204,6 @@ img {
   background-color: var(--basic-red-pink);
 }
 
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -227,8 +224,8 @@ img {
   padding-bottom: 5px;
   color: var(--basic-black);
   margin-bottom: 10px;
-   margin-top: 75px;
-   padding: 0px;
+  margin-top: 75px;
+  padding: 0px;
 }
 
 .connect-friend .discount {
@@ -278,12 +275,6 @@ img {
   opacity: 0.4;
 }
 
-.filter-option:disabled {
-  color: var(--basic-gray-dark);
-  opacity: 0.3;
-}
-
-
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
@@ -294,6 +285,14 @@ img {
   background-color: var(--basic-tarp-gray);
   border-radius: 50%;
   opacity: 0.4;
+}
+
+:disabled.filter-input-radio + label {
+  opacity: 0.1;
+}
+
+.filter-input-radio:checked + label:hover::after{
+ border-color: var(--basic-tarp-gray);
 }
 
 .filter-option label {
@@ -318,6 +317,14 @@ img {
   background-size: contain;
   opacity: 0.4;
  }
+
+ :disabled.filter-input-checkbox + label {
+  opacity: 0.1;
+}
+
+.filter-input-checkbox + label:hover {
+  color: var(--basic-tarp-gray);
+}
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -497,28 +504,21 @@ img {
   border-style: solid;
   border-width: 10px 5.5px 0;
   border-color: var(--basic-black-brown) transparent transparent;
+
 }
 
-.sorting-arrows .arrow-up:hover {
-  border-color: transparent transparent var(-basic-black-brown);
-}
-
-.sorting-arrows .arrow-up:active{
-  background-color: transparent transparent var(--basic-black-brown);
-}
-
-.sorting-arrows .arrow-down:focus {
-  background-color: transparent transparent var(--basic-black-brown);
+.sorting-arrows .arrow-down:active {
+  border-color: transparent transparent var(--basic-black-brown);
 
 }
 
 .sorting-arrows .arrow-down {
-  background-color: transparent transparent var(--basic-black-brown);
+  border-color: var(--basic-black-brown) transparent transparent;
+  opacity: 0.2;
 }
 
 .sorting-arrows .arrow-down:hover {
-  border-color: transparent transparent var(-basic-black-brown);
-  opacity: 0.2;
+  border-color:  var(--white-gray-neutral) transparent transparent;
 }
 
 .sorting-arrows .arrow-up {
@@ -526,6 +526,7 @@ img {
   border-width: 0 5.5px 10px;
   border-color: transparent transparent var(--basic-black-brown);
   opacity: 0.2;
+
 }
 
 .sorting-arrows .arrow-up:hover {
@@ -534,7 +535,7 @@ img {
   border-color: transparent transparent var(--white-gray-neutral);
 }
 
-.sorting-arrows .arrow-up:focus {
+.sorting-arrows .arrow-up:active {
   margin: 0;
   border-width: 0 5.5px 10px;
   border-color: transparent transparent var(--basic-black-brown);
@@ -563,13 +564,10 @@ img {
     margin-right: 46px;
 }
 
-
-
 .main-navigation .active{
-    border-bottom: 2px solid #fb565a;
+    border-bottom: 2px solid var(--basic-tomato-dark);
     padding-bottom: 8px;
 }
-
 
 .main-navigation a {
   font-style: normal;
@@ -670,12 +668,12 @@ img {
   margin-top: -6px;
 }
 
-:not(:first-child).cards-item path {
+.cards-item path {
   fill: var(--basic-tarp-gray);
   opacity: 0.3;
 }
 
-:not(:first-child).cards-item:hover  path {
+.cards-item:hover  path {
   fill: var(--basic-tarp-gray);
 }
 
@@ -860,6 +858,7 @@ img {
 .modal-hidden {
   display: none;
 }
+
 .appointment-form  {
  display: flex;
  justify-content: space-between;
@@ -904,11 +903,9 @@ img {
   border: 2px solid var(--gray-beard);
 }
 
-
 .text-letter {
   display: flex;
   flex-direction: column;
-
 }
 
 .connect .button {
@@ -937,8 +934,6 @@ img {
 .connect .button:hover {
  background-color: var(--basic-red-pink);
 }
-
-
 
 .modal-close::before {
   transform: rotate(45deg);
@@ -974,14 +969,13 @@ img {
 
 .modal-close:hover::before,
 .modal-close:hover::after {
-  color: var(--basic-tomato-dark);
+  background-color: var(--basic-tomato-dark);
 }
 
 .modal-close:focus::before,
 .modal-close:focus::after {
   opacity: 0.1;
 }
-
 
 .modal-error {
   border-color: var(--basic-tomato-dark)!important;
@@ -993,6 +987,7 @@ img {
   font-size: 16px;
   line-height: 18px;
 }
+
 .text-us {
   display: flex;
   flex-wrap: wrap;
@@ -1014,7 +1009,6 @@ img {
   margin-top: 80px;
   background-size: cover;
   object-fit: cover;
-  position: relative;
 }
 
 .wrapper-map {
@@ -1035,19 +1029,19 @@ img {
   width: 319px;
   height: 308px;
   position: absolute;
-  bottom: 114px;
-  left: 70px;
+  bottom: 15px;
+  left: 50px;
   background-color: var(--basic-white);
   justify-content: center;
   align-items: center;
 }
 
 .contacts .adress {
-    letter-spacing: 0.1px;
-    line-height: 18px;
-    color: var(--basic-dull-gray) ;
-    font-size: 18px;
-    font-weight: normal;
+  letter-spacing: 0.1px;
+  line-height: 18px;
+  color: var(--basic-dull-gray) ;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .contacts-wrapper {
@@ -1249,7 +1243,6 @@ img {
   line-height: 10px;
   padding: 6px 21px 34px 0;
 }
-
 
 .partners .container {
   padding: 60px 0 20px;
