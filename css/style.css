@@ -57,6 +57,9 @@ img {
 
 .logo img {
   color: var(--basic-black);
+  position: absolute;
+  left: 50px;
+  top: 30px;
 }
 
 .logo img:hover,
@@ -287,13 +290,13 @@ img {
   opacity: 0.4;
 }
 
-:disabled.filter-input-radio + label {
-  opacity: 0.1;
-}
+.filter-input-radio:checked + label:hover::before{
+  border-color: var(--basic-tarp-gray);
+ }
 
 .filter-input-radio:checked + label:hover::after{
- border-color: var(--basic-tarp-gray);
-}
+  border-color: var(--basic-tarp-gray);
+ }
 
 .filter-option label {
   position: relative;
@@ -305,25 +308,21 @@ img {
  margin: 15px;
 }
 
- .filter-input-checkbox:checked + label::after {
-  content: "";
-  width: 25px;
-  height: 22px;
-  position: absolute;
-  left: -43px;
-  top: 0px;
-  background-image: url("../img/svg-nerds/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.4;
- }
-
- :disabled.filter-input-checkbox + label {
-  opacity: 0.1;
+.filter-input-checkbox:checked + label::after {
+content: "";
+width: 25px;
+height: 22px;
+position: absolute;
+left: -43px;
+top: 0px;
+background-image: url("../img/svg-nerds/checkbox-on.svg");
+background-repeat: no-repeat;
+background-size: contain;
+opacity: 0.4;
 }
 
 .filter-input-checkbox + label:hover {
-  color: var(--basic-tarp-gray);
+  border-color: var(--basic-tarp-gray);
 }
 
 .filter-input-checkbox + label::before {
@@ -362,10 +361,6 @@ img {
   color: var(--basic-gray-dark)
 }
 
-.menu label:disabled {
-  opacity: 0.3;
-}
-
 .menu .button {
   width: 260px;
   height: 50px;
@@ -398,10 +393,6 @@ img {
 .catalog-cards h3:focus {
   color: var(--basic-black);
   opacity: 0.3;
-}
-
-:not(:first-child) .cards-item:hover path {
-  fill: var(--basic-tarp-gray);
 }
 
 .catalog-cards p {
@@ -508,7 +499,8 @@ img {
 }
 
 .sorting-arrows .arrow-down:active {
-  border-color: transparent transparent var(--basic-black-brown);
+  border-color:  var(--basic-black-brown) transparent transparent;
+  opacity: 1;
 
 }
 
@@ -533,6 +525,7 @@ img {
   margin: 0;
   border-width: 0 5.5px 10px;
   border-color: transparent transparent var(--white-gray-neutral);
+  opacity: 1;
 }
 
 .sorting-arrows .arrow-up:active {
@@ -544,6 +537,7 @@ img {
 .header-wrapper {
   padding-top: 55px;
   background-color: var(--basic-dark-white);
+  position: relative;
 }
 
 .header {
@@ -673,7 +667,7 @@ img {
   opacity: 0.3;
 }
 
-.cards-item:hover  path {
+.cards-item:hover path {
   fill: var(--basic-tarp-gray);
 }
 
@@ -840,6 +834,10 @@ img {
   font-size: inherit;
 }
 
+.filter-option label:hover::before{
+ opacity: 1;
+}
+
 .connect {
   align-items: center;
   justify-content: center;
@@ -923,7 +921,6 @@ img {
  font-weight: bold;
  font-size: 45px;
  line-height: 53px;
-
 }
 
 .connect .button:focus {
@@ -970,10 +967,11 @@ img {
 .modal-close:hover::before,
 .modal-close:hover::after {
   background-color: var(--basic-tomato-dark);
+  opacity: 1;
 }
 
-.modal-close:focus::before,
-.modal-close:focus::after {
+.modal-close:active::before,
+.modal-close:active::after {
   opacity: 0.1;
 }
 
@@ -1003,24 +1001,22 @@ img {
   margin-bottom: 62px;
 }
 
-.map {
+.map iframe {
   width: 100%;
-  height: 100%;;
-  margin-top: 80px;
-  background-size: cover;
-  object-fit: cover;
+  height: 420px;
 }
 
 .wrapper-map {
-  width: 1160px;
-  margin: 0 auto;
+  width: 1250px;
+  margin:  0 auto;
   position: relative;
+  margin-top: 80px;
 }
 
 .marker {
   position: absolute;
-  right: 310px;
-  top: 40px;
+  right: 450px;
+  top: 80px;
 }
 
 .contacts {
@@ -1029,8 +1025,8 @@ img {
   width: 319px;
   height: 308px;
   position: absolute;
-  bottom: 15px;
-  left: 50px;
+  bottom: 50px;
+  left: 80px;
   background-color: var(--basic-white);
   justify-content: center;
   align-items: center;
@@ -1223,7 +1219,7 @@ img {
   margin-left: auto;
 }
 
-.partners {
+.members {
   width: 1160px;
   margin: 0 auto;
 }
@@ -1244,12 +1240,12 @@ img {
   padding: 6px 21px 34px 0;
 }
 
-.partners .container {
+.members .container {
   padding: 60px 0 20px;
   border-bottom: 2px solid var(--basic-dark-white);
 }
 
-.partners .partners-list {
+.members .members-list {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -1257,21 +1253,20 @@ img {
   margin: 0;
 }
 
-.partners-item {
+.members-item {
   position: relative;
 }
 
-.partners-item a {
+.members-item a {
   opacity: 0.9;
   filter: brightness(1);
 }
 
-.partners-item a:hover {
-  opacity: 0.9;
-  filter: brightness(0.5);
+.members-item a:hover {
+  opacity: 0.2;
 }
 
-.partners-item::after {
+.members-item::after {
   content: "";
   width: 2px;
   height: 50px;
